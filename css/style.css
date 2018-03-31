@@ -1,0 +1,204 @@
+.nav {
+	padding: 3em 0;
+	border-top: 1px solid #AAA;
+	margin: -1px 0;
+}
+.nav .menu__list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.nav .menu__list li {
+	display: inline;
+}
+.nav .menu__list li a {
+	position: relative;
+	display: inline-block;
+	padding: 15px 20px;
+	font-weight: 700;
+	color: #4C4C4C;
+	text-decoration: none;
+	transition: .35s ease;
+}
+.nav .menu__list li a:hover {
+	color: #FFF;
+}
+.nav .menu__list li a:after,
+.nav .menu__list li a:before {
+	position: absolute;
+	content: " ";
+	background: #4285F4;
+	width: 0;
+	height: 0;
+	z-index: -1;
+	transition: .35s ease;
+}
+
+/* Simple navbar */
+.nav.nav--simple .menu__list li a {
+	transition: .35s ease;
+}
+.nav.nav--simple .menu__list li a:hover {
+	background: #4285F4;
+	color: #FFF;
+}
+/* Layer down */
+.nav.nav--layer-down .menu__list li a:after {
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+.nav.nav--layer-down .menu__list li a:hover:after {
+	height: 100%;
+}
+
+/* Layer up */
+.nav.nav--layer-up .menu__list li a:after {
+	bottom: 0;
+	left: 0;
+	width: 100%;
+}
+.nav.nav--layer-up .menu__list li a:hover:after {
+	height: 100%;
+}
+
+/* Layer left */
+.nav.nav--layer-left .menu__list li a:after {
+	top: 0;
+	left: 0;
+	height: 100%;
+}
+.nav.nav--layer-left .menu__list li a:hover:after {
+	width: 100%;
+}
+
+/* Layer right */
+.nav.nav--layer-right .menu__list li a:after {
+	top: 0;
+	right: 0;
+	height: 100%;
+}
+.nav.nav--layer-right .menu__list li a:hover:after {
+	width: 100%;
+}
+
+/* Layer left in right out */
+.nav.nav--layer-left-to-right .menu__list li a:after {
+	top: 0;
+	right: 0;
+	height: 100%;
+	transition-property: width;
+}
+.nav.nav--layer-left-to-right .menu__list li a:hover:after {
+	width: 100%;
+	left: 0;
+	right: auto;
+}
+
+/* Layer right in left out */
+.nav.nav--layer-right-to-left .menu__list li a:after {
+	top: 0;
+	left: 0;
+	height: 100%;
+	transition-property: width;
+}
+.nav.nav--layer-right-to-left .menu__list li a:hover:after {
+	width: 100%;
+	right: 0;
+	left: auto;
+}
+
+
+/* Layer center */
+.nav.nav--layer-center .menu__list li a:after {
+	top: 50%;
+	transform: translateY(-50%);
+	left: 0;
+	margin: 0 auto;
+	width: 100%;
+}
+.nav.nav--layer-center .menu__list li a:hover:after {
+	height: 100%;
+}
+
+/* Layer top left */
+.nav.nav--layer-top-left .menu__list li a:after {
+	top: 0;
+	left: 0;
+}
+.nav.nav--layer-top-left .menu__list li a:hover:after {
+	width: 100%;
+	height: 100%;
+}
+
+/* Layer top left */
+.nav.nav--layer-top-right .menu__list li a:after {
+	top: 0;
+	right: 0;
+}
+.nav.nav--layer-top-right .menu__list li a:hover:after {
+	width: 100%;
+	height: 100%;
+}
+
+/* Layer top left */
+.nav.nav--layer-bottom-left .menu__list li a:after {
+	left: 0;
+	bottom: 0;
+}
+.nav.nav--layer-bottom-left .menu__list li a:hover:after {
+	width: 100%;
+	height: 100%;
+}
+
+/* Layer top left */
+.nav.nav--layer-bottom-right .menu__list li a:after {
+	right: 0;
+	bottom: 0;
+}
+.nav.nav--layer-bottom-right .menu__list li a:hover:after {
+	width: 100%;
+	height: 100%;
+}
+
+/* Layer top left */
+.nav.nav--layer-top-center .menu__list li a:after {
+	left: 0;
+	right: 0;
+	top: 0;
+	margin: 0 auto;
+}
+.nav.nav--layer-top-center .menu__list li a:hover:after {
+	width: 100%;
+	height: 100%;
+}
+
+/* Layer top left */
+.nav.nav--layer-bottom-center .menu__list li a:after {
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: 0 auto;
+}
+.nav.nav--layer-bottom-center .menu__list li a:hover:after {
+	width: 100%;
+	height: 100%;
+}
+
+/* Layer top left */
+.nav.nav--layer-top-bottom .menu__list li a:before {
+	left: 0;
+	right: 0;
+	top: 0;
+	width: 100%;
+}
+.nav.nav--layer-top-bottom .menu__list li a:after {
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+}
+.nav.nav--layer-top-bottom .menu__list li a:hover:before,
+.nav.nav--layer-top-bottom .menu__list li a:hover:after {
+	height: 100%;
+}
